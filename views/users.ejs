@@ -1,0 +1,29 @@
+<%- include('includes/head.ejs') %>
+<link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+<%- include('includes/navigation.ejs') %>
+     <% if (users.length > 0) { %>
+         <div class="users-wrapper">
+             <% for (user of users) { %>
+
+                 <div class="users-inner">
+                     <img src="<%= user.imageUrl %>" alt="">
+                     <div>
+                         <p>Foydalanuvchi ismi: <%= user.name%></p>
+                         <p>Foydalanuvchi familiyasi:<%= user.lastname%></p>
+                     </div>
+                     <div class="actions-handler">
+                             <a class="btn" href="/edit-user/<%= user.id %>?edit=true">Edit</a>
+                         <form action="/delete" method="post">
+                             <input type="hidden" name="userId" value="<%= user.id%>">
+                             <button class="delete-btn">Delete</button>
+                         </form>
+                     </div>
+                 </div>
+             <% } %>
+         </div>
+
+<% } %>
+<%- include('includes/end.ejs') %>

@@ -1,0 +1,139 @@
+html {
+      box-sizing: border-box;
+}
+
+* {
+      box-sizing: inherit;
+      padding: 0;
+      margin: 0;
+      font-size: 1.2rem;
+      font-family: sans-serif;
+}
+
+body {
+      margin: 0;
+}
+
+ul {
+      list-style-type: none;
+}
+
+a {
+      text-decoration: none;
+      color: white;
+}
+
+.active {
+      color: darkblue;
+}
+
+.header {
+      background-color: steelblue;
+      padding: 1rem;
+}
+
+.navbar__list {
+      display: flex;
+}
+
+.navbar__list li:not(:last-child) {
+      margin-right: 2rem;
+}
+
+
+input {
+      outline: none;
+}
+
+.add-user {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 4rem;
+}
+
+.add-user label {
+      display: block;
+      margin-bottom: 0.4rem;
+}
+
+.add-user input {
+      margin-bottom: 1rem;
+      padding: 0.2rem;
+      display: block;
+      outline: none;
+      border-radius: 0.2rem;
+      border: 1px solid steelblue;
+}
+
+.add-user input:focus {
+      outline: 1px solid steelblue;
+}
+
+.btn {
+      padding: 0.6rem;
+      border-radius: 0.5rem;
+      background-color: steelblue;
+      border: 1px solid steelblue;
+}
+
+.delete-btn {
+      padding: 0.6rem;
+      border-radius: 0.5rem;
+      background-color: red;
+      border: 1px solid red;
+      margin-left: 1rem;
+}
+
+.btn:hover,
+.btn:active {
+      background-color: white;
+      color: steelblue;
+}
+
+.delete-btn:hover,
+.delete-btn:active {
+      background-color: white;
+      color: red;
+}
+
+
+
+.users-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+}
+
+.users-inner {
+      width: 100%;
+      max-width: 20rem;
+      margin: 1rem;
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      align-items: center;
+      flex-direction: column;
+      border: 1px solid steelblue;
+      padding: 1rem;
+}
+
+.users-wrapper img {
+      object-fit: cover;
+      width: 16rem;
+      height: 16rem;
+      display: block;
+      margin-bottom: 0.5rem;
+      border-radius: 50%;
+}
+
+.users-wrapper p {
+      font-size: 1rem;
+}
+
+
+.actions-handler {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+}
